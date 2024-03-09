@@ -1,5 +1,4 @@
 
-//image
 FROM nginx
 
 
