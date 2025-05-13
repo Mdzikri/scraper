@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: stress-landing
+spec:
+  containers:
+  - name: stressor
+    image: curlimages/curl
+    command: ["/bin/sh"]
+    args:
+      - -c
+      - |
+        while true; do
+          curl -s http://landing-svc.default.svc.cluster.local/ > /dev/null
+        done

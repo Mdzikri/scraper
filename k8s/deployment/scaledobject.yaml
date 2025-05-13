@@ -1,0 +1,19 @@
+apiVersion: keda.sh/v1alpha1
+kind: ScaledObject
+metadata:
+  name: landing-prometheus-scaler
+spec:
+  scaleTargetRef:
+    name: landing
+  minReplicaCount: 2
+  maxReplicaCount: 5
+  pollingInterval: 30
+  cooldownPeriod: 60
+  triggers:
+    - type: prometheus
+      metadata:
+        serverAddress: http://prometheus.default.svc.cluster.local
+        metricName: http_requests_per_pod
+        threshold: "50"
+        query: |
+          sum(rate(http_requests_total{job="landing"}[1m])) by (pod)
