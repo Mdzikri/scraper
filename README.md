@@ -80,6 +80,7 @@ Deploy a sample landing page web application using Docker and Kubernetes with fu
 ![alt text](image-2.png)
 
 * [x] GCP Alert received via email (CPU > 70%)
+![alt text](image-8.png)
 ![alt text](image-3.png)
 
 
@@ -89,6 +90,8 @@ Deploy a sample landing page web application using Docker and Kubernetes with fu
 
 
 ![alt text](image-5.png)
+
+
 
 ## ⚠ Notes & Limitations
 
@@ -100,6 +103,8 @@ Deploy a sample landing page web application using Docker and Kubernetes with fu
 ---
 
 ## 🚀 Final Links
+
+![alt text](image-6.png)
 
 * Application: [http://landing-service.duckdns.org](http://landing-service.duckdns.org)
 
